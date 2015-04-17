@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Springboard.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelSplitter id="ps1">
+                <f:facet name="first">
+                    <af:panelAccordion discloseMany="false" id="pa1" partialTriggers="pane1">
+                        <af:showDetailItem id="pane1" text="mes competences"/>
+                        <af:showDetailItem id="pane2" text="mes formations"
+                                           itemListener="#{viewScope.menu_gauche_bean.show_formations}"/>
+                    </af:panelAccordion>
+                </f:facet>
+                <f:facet name="second">
+                    <af:region value="#{bindings.competencestaskflowdefinition1.regionModel}" id="r1"/>
+                </f:facet>
+            </af:panelSplitter>
+        </af:form>
+    </af:document>
+</f:view>

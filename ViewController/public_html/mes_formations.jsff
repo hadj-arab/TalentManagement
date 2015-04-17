@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:facelets="http://xmlns.oracle.com/jdev/webapp/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:messages id="m1"/>
+    <af:pageTemplate viewId="/template1.jsf" id="pt1">
+        <f:facet name="center">
+            <af:panelSplitter id="ps1">
+                <f:facet name="first">
+                    <af:region value="#{bindings.menu_gauche1.regionModel}" id="r1"/>
+                </f:facet>
+                <f:facet name="second">
+                    <af:panelSplitter id="ps2" orientation="vertical">
+                        <f:facet name="first">
+                            <af:panelCollection id="pc1">
+                                <f:facet name="menus"/>
+                                <f:facet name="toolbar"/>
+                                <af:table value="#{bindings.FormationView1.collectionModel}" var="row"
+                                          rows="#{bindings.FormationView1.rangeSize}"
+                                          emptyText="#{bindings.FormationView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                          rowBandingInterval="0"
+                                          selectedRowKeys="#{bindings.FormationView1.collectionModel.selectedRow}"
+                                          selectionListener="#{bindings.FormationView1.collectionModel.makeCurrent}"
+                                          rowSelection="single" fetchSize="#{bindings.FormationView1.rangeSize}"
+                                          filterModel="#{bindings.FormationView1Query.queryDescriptor}"
+                                          queryListener="#{bindings.FormationView1Query.processQuery}"
+                                          filterVisible="true" varStatus="vs" id="t1" columnStretching="last"
+                                          editingMode="clickToEdit">
+                                    <af:column sortProperty="#{bindings.FormationView1.hints.Nom.name}"
+                                               filterable="true" sortable="true"
+                                               headerText="#{bindings.FormationView1.hints.Nom.label}" id="c1">
+                                        <af:outputText value="#{row.Nom}"
+                                                       shortDesc="#{bindings.FormationView1.hints.Nom.tooltip}"
+                                                       id="ot1"/>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.FormationView1.hints.Description.name}"
+                                               filterable="true" sortable="true"
+                                               headerText="#{bindings.FormationView1.hints.Description.label}" id="c2">
+                                        <af:outputText value="#{row.Description}"
+                                                       shortDesc="#{bindings.FormationView1.hints.Description.tooltip}"
+                                                       id="ot2"/>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.FormationView1.hints.Duree.name}"
+                                               filterable="true" sortable="true"
+                                               headerText="#{bindings.FormationView1.hints.Duree.label}" id="c3">
+                                        <af:outputText value="#{row.Duree}"
+                                                       shortDesc="#{bindings.FormationView1.hints.Duree.tooltip}"
+                                                       id="ot3">
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.FormationView1.hints.Duree.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.FormationView1.hints.Domaine.name}"
+                                               filterable="true" sortable="true"
+                                               headerText="#{bindings.FormationView1.hints.Domaine.label}" id="c4">
+                                        <af:outputText value="#{row.Domaine}"
+                                                       shortDesc="#{bindings.FormationView1.hints.Domaine.tooltip}"
+                                                       id="ot4"/>
+                                    </af:column>
+                                </af:table>
+                                <f:facet name="statusbar"/>
+                            </af:panelCollection>
+                        </f:facet>
+                        <f:facet name="second">
+                            <af:panelTabbed position="above" id="pt2">
+                                <af:showDetailItem id="tab1" text="Details formation" disclosed="true"/>
+                            </af:panelTabbed>
+                        </f:facet>
+                    </af:panelSplitter>
+                </f:facet>
+            </af:panelSplitter>
+        </f:facet>
+    </af:pageTemplate>
+</ui:composition>

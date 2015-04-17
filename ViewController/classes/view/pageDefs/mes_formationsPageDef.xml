@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="mes_formationsPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="menu_gauche1" taskFlowId="/WEB-INF/menu_gauche.xml#menu_gauche" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <iterator Binds="FormationView1" RangeSize="25" DataControl="AppModuleDataControl" id="FormationView1Iterator"/>
+    <searchRegion Binds="FormationView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="FormationView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="FormationView1Iterator" id="FormationView1">
+      <nodeDefinition DefName="model.FormationView" Name="FormationView10">
+        <AttrNames>
+          <Item Value="Nom"/>
+          <Item Value="Description"/>
+          <Item Value="Duree"/>
+          <Item Value="Domaine"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

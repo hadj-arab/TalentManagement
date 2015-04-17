@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="untitled2PageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CompetenceView1" RangeSize="25" DataControl="AppModuleDataControl" id="CompetenceView1Iterator"/>
+    <searchRegion Binds="CompetenceView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CompetenceView1Query"/>
+    <taskFlow id="menu_gauche1" taskFlowId="/WEB-INF/menu_gauche.xml#menu_gauche" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CompetenceView1Iterator" id="CompetenceView1">
+      <nodeDefinition DefName="model.CompetenceView" Name="CompetenceView10">
+        <AttrNames>
+          <Item Value="IdCompetence"/>
+          <Item Value="Nom"/>
+          <Item Value="Description"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="CompetenceView1Iterator" id="Nom">
+      <AttrNames>
+        <Item Value="Nom"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CompetenceView1Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

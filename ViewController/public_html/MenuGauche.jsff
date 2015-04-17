@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelAccordion discloseMany="false" id="pa1">
+    <af:showDetailItem id="pane1" text="Mon compte" disclosed="true"/>
+    <af:showDetailItem id="pane2" text="Mon profil">
+      <af:panelAccordion discloseMany="false" id="pa2">
+        <af:showDetailItem id="pane5" text="Mes compétences"/>
+        <af:showDetailItem id="pane6" text="Mes formations"/>
+      </af:panelAccordion>
+    </af:showDetailItem>
+    <af:showDetailItem id="pane3" text="Mes objectifs"/>
+    <af:showDetailItem id="pane4" text="Mes choix de formation"/>
+  </af:panelAccordion>
+</ui:composition>

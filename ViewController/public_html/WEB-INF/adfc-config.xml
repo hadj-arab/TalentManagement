@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="Springboard">
+    <page>/Springboard.jsf</page>
+  </view>
+  <view id="view1">
+    <page>/view1.jsf</page>
+  </view>
+  <control-flow-rule id="__2">
+    <from-activity-id>Springboard</from-activity-id>
+    <control-flow-case id="__3">
+      <from-outcome>event</from-outcome>
+      <to-activity-id>view1</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__1">
+    <managed-bean-name>menu_gauche_bean</managed-bean-name>
+    <managed-bean-class>view.menu_gauche_class</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Superviser"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="MOUSS.SUPERVISER"
+  AliasName="Superviser"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="MatriculeAgt"
+    IsNotNull="true"
+    Precision="8"
+    ColumnName="MATRICULE_AGT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MOUSS.SUPERVISER"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="8"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MatriculeAgtSup"
+    IsNotNull="true"
+    Precision="8"
+    ColumnName="MATRICULE_AGT_SUP"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MOUSS.SUPERVISER"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="8"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DateSup"
+    IsNotNull="true"
+    ColumnName="DATE_SUP"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="MOUSS.SUPERVISER"
+    PrimaryKey="true"/>
+  <AccessorAttribute
+    Name="Agent"
+    Association="model.SuperviserFk1Assoc"
+    AssociationEnd="model.SuperviserFk1Assoc.Agent"
+    AssociationOtherEnd="model.SuperviserFk1Assoc.Superviser"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Agent1"
+    Association="model.SuperviserFk2Assoc"
+    AssociationEnd="model.SuperviserFk2Assoc.Agent1"
+    AssociationOtherEnd="model.SuperviserFk2Assoc.Superviser1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="SuperviserPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SUPERVISER_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.Superviser.MatriculeAgt"/>
+      <Item Value="model.Superviser.MatriculeAgtSup"/>
+      <Item Value="model.Superviser.DateSup"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SuperviserFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="AGENT_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="SUPERVISER_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.Superviser.MatriculeAgt"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SuperviserFk2">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="AGENT_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="SUPERVISER_FK2"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.Superviser.MatriculeAgtSup"/>
+    </AttrArray>
+  </Key>
+</Entity>

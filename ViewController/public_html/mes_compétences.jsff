@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:facelets="http://xmlns.oracle.com/jdev/webapp/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:messages id="m2"/>
+  <af:pageTemplate viewId="/template1.jsf" id="pt1">
+    <f:facet name="center">
+      <af:panelSplitter id="ps1">
+        <f:facet name="first">
+          <af:region value="#{bindings.menu_gauche1.regionModel}" id="r1"/>
+        </f:facet>
+        <f:facet name="second">
+          <af:panelSplitter id="ps2" orientation="vertical">
+            <f:facet name="first">
+              <af:panelCollection id="pc1">
+                <f:facet name="menus">
+                  <af:menu text="Trier par" id="m1" detachable="true">
+                    <af:commandMenuItem id="cmi1" text="niveau"/>
+                    <af:commandMenuItem text="Nom" id="cmi2"/>
+                  </af:menu>
+                </f:facet>
+                <f:facet name="toolbar"/>
+                <af:table value="#{bindings.CompetenceView1.collectionModel}" var="row"
+                          rows="#{bindings.CompetenceView1.rangeSize}"
+                          emptyText="#{bindings.CompetenceView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0"
+                          selectedRowKeys="#{bindings.CompetenceView1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.CompetenceView1.collectionModel.makeCurrent}"
+                          rowSelection="single" fetchSize="#{bindings.CompetenceView1.rangeSize}"
+                          filterModel="#{bindings.CompetenceView1Query.queryDescriptor}"
+                          queryListener="#{bindings.CompetenceView1Query.processQuery}" filterVisible="true"
+                          varStatus="vs" id="t1" columnStretching="last" editingMode="clickToEdit">
+                  <af:column sortProperty="#{bindings.CompetenceView1.hints.IdCompetence.name}" filterable="true"
+                             sortable="true" headerText="#{bindings.CompetenceView1.hints.IdCompetence.label}" id="c1">
+                    <af:inputText value="#{row.bindings.IdCompetence.inputValue}"
+                                  label="#{bindings.CompetenceView1.hints.IdCompetence.label}"
+                                  required="#{bindings.CompetenceView1.hints.IdCompetence.mandatory}"
+                                  columns="#{bindings.CompetenceView1.hints.IdCompetence.displayWidth}"
+                                  maximumLength="#{bindings.CompetenceView1.hints.IdCompetence.precision}"
+                                  shortDesc="#{bindings.CompetenceView1.hints.IdCompetence.tooltip}" id="it1">
+                      <f:validator binding="#{row.bindings.IdCompetence.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.CompetenceView1.hints.IdCompetence.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.CompetenceView1.hints.Nom.name}" filterable="true" sortable="true"
+                             headerText="#{bindings.CompetenceView1.hints.Nom.label}" id="c2">
+                    <af:inputText value="#{row.bindings.Nom.inputValue}"
+                                  label="#{bindings.CompetenceView1.hints.Nom.label}"
+                                  required="#{bindings.CompetenceView1.hints.Nom.mandatory}"
+                                  columns="#{bindings.CompetenceView1.hints.Nom.displayWidth}"
+                                  maximumLength="#{bindings.CompetenceView1.hints.Nom.precision}"
+                                  shortDesc="#{bindings.CompetenceView1.hints.Nom.tooltip}" id="it2">
+                      <f:validator binding="#{row.bindings.Nom.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.CompetenceView1.hints.Description.name}" filterable="true"
+                             sortable="true" headerText="#{bindings.CompetenceView1.hints.Description.label}" id="c3">
+                    <af:inputText value="#{row.bindings.Description.inputValue}"
+                                  label="#{bindings.CompetenceView1.hints.Description.label}"
+                                  required="#{bindings.CompetenceView1.hints.Description.mandatory}"
+                                  columns="#{bindings.CompetenceView1.hints.Description.displayWidth}"
+                                  maximumLength="#{bindings.CompetenceView1.hints.Description.precision}"
+                                  shortDesc="#{bindings.CompetenceView1.hints.Description.tooltip}" id="it3">
+                      <f:validator binding="#{row.bindings.Description.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                </af:table>
+                <f:facet name="statusbar"/>
+              </af:panelCollection>
+            </f:facet>
+            <f:facet name="second">
+              <af:panelTabbed position="above" id="pt2">
+                <af:showDetailItem id="tab1" text="Competence details">
+                  <af:panelFormLayout id="pfl1">
+                    <af:inputText value="#{bindings.Nom.inputValue}" label="#{bindings.Nom.hints.label}"
+                                  required="#{bindings.Nom.hints.mandatory}" readOnly="true"
+                                  columns="#{bindings.Nom.hints.displayWidth}"
+                                  maximumLength="#{bindings.Nom.hints.precision}"
+                                  shortDesc="#{bindings.Nom.hints.tooltip}" id="it4">
+                      <f:validator binding="#{bindings.Nom.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                                  required="#{bindings.Description.hints.mandatory}" readOnly="true"
+                                  columns="#{bindings.Description.hints.displayWidth}"
+                                  maximumLength="#{bindings.Description.hints.precision}"
+                                  shortDesc="#{bindings.Description.hints.tooltip}" id="it5">
+                      <f:validator binding="#{bindings.Description.validator}"/>
+                    </af:inputText>
+                  </af:panelFormLayout>
+                </af:showDetailItem>
+                <af:showDetailItem text="Rating" id="sdi1"/>
+              </af:panelTabbed>
+            </f:facet>
+          </af:panelSplitter>
+        </f:facet>
+      </af:panelSplitter>
+    </f:facet>
+  </af:pageTemplate>
+</ui:composition>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AgentFk1Link"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  EntityAssociation="model.AgentFk1Assoc">
+  <ViewLinkDefEnd
+    Name="StructureView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.StructureView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="StructureView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.StructureView.IdStructure"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="AgentView"
+    Cardinality="-1"
+    Owner="model.AgentView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="AgentView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.AgentView.IdStructure"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

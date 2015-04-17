@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
+  <af:xmlContent>
+    <afc:component>
+      <afc:description/>
+      <afc:display-name>template3</afc:display-name>
+      <facet>
+        <facet-name>
+          header
+        </facet-name>
+      </facet>
+      <facet>
+        <facet-name>
+          left
+        </facet-name>
+      </facet>
+    </afc:component>
+  </af:xmlContent>
+  <af:panelSplitter orientation="vertical" splitterPosition="172" id="pt_ps2">
+    <f:facet name="first">
+      <af:panelGridLayout id="pt_pgl1" inlineStyle="background-color:GrayText;">
+        <af:gridRow marginTop="5px" height="100%" marginBottom="5px" id="pt_gr1">
+          <af:gridCell marginStart="5px" width="20%" id="pt_gc1">
+            <af:image source="#{resource['images:Sonatrach.png']}" id="pt_i1"
+                      inlineStyle="width:129px; height:137px; flex-align:center; flex-item-align:center; flex-pack:center; margin-left:55px; margin-right:20px; margin-top:10px;"/>
+          </af:gridCell>
+          <af:gridCell marginStart="5px" width="50%" id="pt_gc2">
+            <af:outputText value="Talent Management" id="pt_ot1"
+                           inlineStyle="font-size:xx-large; font-weight:bold; text-align:center; margin-left:200px; color:MenuText; font-family:'' Arial narrow ''; margin-top:20px;"/>
+          </af:gridCell>
+          <af:gridCell marginStart="5px" width="30%" marginEnd="5px" id="pt_gc3"/>
+        </af:gridRow>
+        <af:facetRef facetName="header"/>
+      </af:panelGridLayout>
+    </f:facet>
+    <f:facet name="second">
+      <af:panelSplitter orientation="horizontal" splitterPosition="255" id="pt_ps1">
+        <f:facet name="first">
+          <af:panelGridLayout id="pt_pgl2" inlineStyle="background-color:WindowText;">
+            <af:gridRow marginTop="5px" height="100%" marginBottom="5px" id="pt_gr2">
+              <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc4">
+                <af:facetRef facetName="left"/>
+              </af:gridCell>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </f:facet>
+        <f:facet name="second">
+          <af:panelGridLayout id="pt_pgl3" inlineStyle="background-color:Scrollbar;">
+            <af:gridRow marginTop="5px" height="100%" marginBottom="5px" id="pt_gr3">
+              <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc5"/>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </f:facet>
+      </af:panelSplitter>
+    </f:facet>
+  </af:panelSplitter>
+</af:pageTemplateDef>
