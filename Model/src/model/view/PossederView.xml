@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PossederView"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="Posseder"
+    Entity="model.entity.Posseder"/>
+  <ViewAttribute
+    Name="MatriculeAgt"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="MatriculeAgt"
+    EntityUsage="Posseder"
+    AliasName="MATRICULE_AGT"/>
+  <ViewAttribute
+    Name="IdCompetence"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="IdCompetence"
+    EntityUsage="Posseder"
+    AliasName="ID_COMPETENCE"/>
+  <ViewAttribute
+    Name="Note"
+    PrecisionRule="true"
+    EntityAttrName="Note"
+    EntityUsage="Posseder"
+    AliasName="NOTE"/>
+</ViewObject>

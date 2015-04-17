@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="OrganiserFk2Assoc"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Formation"
+    Cardinality="1"
+    Source="true"
+    Owner="model.entity.Formation">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Formation"/>
+      <Attr Name="_foreignKey" Value="model.entity.Formation.FormationPk"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entity.Formation.IdFormation"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="Organiser"
+    Cardinality="-1"
+    Owner="model.entity.Organiser">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Organiser"/>
+      <Attr Name="_foreignKey" Value="model.entity.Organiser.OrganiserFk2"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entity.Organiser.IdFormation"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>
