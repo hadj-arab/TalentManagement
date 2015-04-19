@@ -1,4 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <task-flow-registry xmlns="http://xmlns.oracle.com/adf/controller/rc">
+   <task-flow-descriptor path="WEB-INF/objectifs-task-flow-definition.xml" id="objectifs-task-flow-definition" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
+   <task-flow-descriptor path="WEB-INF/formations-task-flow-definition.xml" id="task-flow-definition2" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="META-INF/adfc-config.xml" id="" type="" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
+   <task-flow-descriptor path="WEB-INF/competences-task-flow-definition.xml" id="task-flow-definition3" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
+   <task-flow-descriptor path="WEB-INF/menu-gauche-task-flow-definition.xml" id="menu-gauche-task-flow-definition" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="unspecified"/>
+   <task-flow-descriptor path="WEB-INF/menu_gauche.xml" id="menu_gauche" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="unspecified"/>
 </task-flow-registry>

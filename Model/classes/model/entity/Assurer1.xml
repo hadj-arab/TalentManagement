@@ -3,12 +3,12 @@
 <!---->
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="Assurer"
+  Name="Assurer1"
   Version="12.1.3.10.8"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="MOUSS.ASSURER"
-  AliasName="Assurer"
+  AliasName="Assurer1"
   BindingStyle="OracleName">
   <Attribute
     Name="IdFormation"
@@ -45,14 +45,14 @@
     Name="Competence"
     Association="model.entity.AssurerFk2Assoc"
     AssociationEnd="model.entity.AssurerFk2Assoc.Competence"
-    AssociationOtherEnd="model.entity.AssurerFk2Assoc.Assurer"
+    AssociationOtherEnd="model.entity.AssurerFk2Assoc.Assurer1"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <AccessorAttribute
     Name="Formation"
     Association="model.entity.AssurerFk1Assoc"
     AssociationEnd="model.entity.AssurerFk1Assoc.Formation"
-    AssociationOtherEnd="model.entity.AssurerFk1Assoc.Assurer"
+    AssociationOtherEnd="model.entity.AssurerFk1Assoc.Assurer1"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <Key
@@ -62,8 +62,8 @@
       <Attr Name="_DBObjectName" Value="ASSURER_PK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.entity.Assurer.IdFormation"/>
-      <Item Value="model.entity.Assurer.IdCompetence"/>
+      <Item Value="model.entity.Assurer1.IdFormation"/>
+      <Item Value="model.entity.Assurer1.IdCompetence"/>
     </AttrArray>
   </Key>
   <Key
@@ -74,7 +74,7 @@
       <Attr Name="_DBObjectName" Value="ASSURER_FK1"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.entity.Assurer.IdFormation"/>
+      <Item Value="model.entity.Assurer1.IdFormation"/>
     </AttrArray>
   </Key>
   <Key
@@ -85,7 +85,7 @@
       <Attr Name="_DBObjectName" Value="ASSURER_FK2"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.entity.Assurer.IdCompetence"/>
+      <Item Value="model.entity.Assurer1.IdCompetence"/>
     </AttrArray>
   </Key>
 </Entity>

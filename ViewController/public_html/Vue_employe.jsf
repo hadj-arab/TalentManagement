@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="mon_profil.jsf" id="d1">
+    <af:form id="f1">
+      <af:pageTemplate viewId="/template1.jsf" id="pt1">
+        <f:facet name="center">
+          <af:panelTabbed position="above" id="pt2">
+            <af:showDetailItem id="tab1" text="Mon profil" icon="#{resource['images:iconeSocial.png']}">
+              <af:region value="#{bindings.taskflowdefinition31.regionModel}" id="r1"/>
+            </af:showDetailItem>
+            <af:showDetailItem id="tab2" text="Mes formations" icon="#{resource['images:iconeFormation.png']}">
+              <af:region value="#{bindings.taskflowdefinition21.regionModel}" id="r2"/>
+            </af:showDetailItem>
+            <af:showDetailItem text="Mes objectifs" id="sdi1" icon="#{resource['images:iconeFiscal.png']}"/>
+          </af:panelTabbed>
+        </f:facet>
+      </af:pageTemplate>
+    </af:form>
+  </af:document>
+</f:view>

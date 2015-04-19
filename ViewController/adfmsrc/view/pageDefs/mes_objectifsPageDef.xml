@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="mes_objectifsPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ObjectifView1" RangeSize="25" DataControl="AppModuleDataControl2" id="ObjectifView1Iterator"/>
+    <searchRegion Binds="ObjectifView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="ObjectifView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="ObjectifView1Iterator" id="ObjectifView1">
+      <nodeDefinition DefName="model.view.ObjectifView" Name="ObjectifView10">
+        <AttrNames>
+          <Item Value="IdObjectif"/>
+          <Item Value="Nom"/>
+          <Item Value="Description"/>
+          <Item Value="Delai"/>
+          <Item Value="Remarque"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="ObjectifView1Iterator" id="IdObjectif">
+      <AttrNames>
+        <Item Value="IdObjectif"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ObjectifView1Iterator" id="Nom">
+      <AttrNames>
+        <Item Value="Nom"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ObjectifView1Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ObjectifView1Iterator" id="Delai">
+      <AttrNames>
+        <Item Value="Delai"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ObjectifView1Iterator" id="Remarque">
+      <AttrNames>
+        <Item Value="Remarque"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

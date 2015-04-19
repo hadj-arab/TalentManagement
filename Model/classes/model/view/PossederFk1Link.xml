@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PossederFk1Link"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  EntityAssociation="model.entity.PossederFk1Assoc">
+  <ViewLinkDefEnd
+    Name="AgentView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.view.AgentView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="AgentView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.view.AgentView.MatriculeAgt"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="PossederView"
+    Cardinality="-1"
+    Owner="model.view.PossederView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="PossederView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.view.PossederView.MatriculeAgt"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

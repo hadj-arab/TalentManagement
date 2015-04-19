@@ -3,7 +3,7 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="Affecter1View"
+  Name="Superviser1View"
   Version="12.1.3.10.8"
   InheritPersonalization="merge"
   SelectListFlags="1"
@@ -14,33 +14,27 @@
   SelectAllAttributes="false"
   PageIterMode="Full">
   <EntityUsage
-    Name="Affecter1"
-    Entity="model.entity.Affecter1"/>
-  <ViewAttribute
-    Name="MatriculeAgtSup"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="MatriculeAgtSup"
-    EntityUsage="Affecter1"
-    AliasName="MATRICULE_AGT_SUP"/>
+    Name="Superviser1"
+    Entity="model.entity.Superviser1"/>
   <ViewAttribute
     Name="MatriculeAgt"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="MatriculeAgt"
-    EntityUsage="Affecter1"
+    EntityUsage="Superviser1"
     AliasName="MATRICULE_AGT"/>
   <ViewAttribute
-    Name="IdObjectif"
+    Name="MatriculeAgtSup"
     IsNotNull="true"
     PrecisionRule="true"
-    EntityAttrName="IdObjectif"
-    EntityUsage="Affecter1"
-    AliasName="ID_OBJECTIF"/>
+    EntityAttrName="MatriculeAgtSup"
+    EntityUsage="Superviser1"
+    AliasName="MATRICULE_AGT_SUP"/>
   <ViewAttribute
-    Name="Evaluation"
+    Name="DateSup"
+    IsNotNull="true"
     PrecisionRule="true"
-    EntityAttrName="Evaluation"
-    EntityUsage="Affecter1"
-    AliasName="EVALUATION"/>
+    EntityAttrName="DateSup"
+    EntityUsage="Superviser1"
+    AliasName="DATE_SUP"/>
 </ViewObject>

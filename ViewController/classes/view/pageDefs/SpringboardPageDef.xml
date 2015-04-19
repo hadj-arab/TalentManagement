@@ -4,11 +4,10 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
+    <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.menu_gauche_bean.dynamicTaskFlowId}" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="competencestaskflowdefinition1"
               taskFlowId="/WEB-INF/competences-task-flow-definition.xml#competences-task-flow-definition"
-              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
-    <taskFlow id="menugauchetaskflowdefinition1"
-              taskFlowId="/WEB-INF/menu-gauche-task-flow-definition.xml#menu-gauche-task-flow-definition"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>

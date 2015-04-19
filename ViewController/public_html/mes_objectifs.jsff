@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:facelets="http://xmlns.oracle.com/jdev/webapp/facelets"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:messages id="m1"/>
+    <af:panelSplitter id="ps1" orientation="vertical">
+        <f:facet name="first">
+            <af:panelCollection id="pc1">
+                <f:facet name="menus"/>
+                <f:facet name="toolbar"/>
+                <af:table value="#{bindings.ObjectifView1.collectionModel}" var="row"
+                          rows="#{bindings.ObjectifView1.rangeSize}"
+                          emptyText="#{bindings.ObjectifView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0" selectedRowKeys="#{bindings.ObjectifView1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.ObjectifView1.collectionModel.makeCurrent}"
+                          rowSelection="single" fetchSize="#{bindings.ObjectifView1.rangeSize}"
+                          filterModel="#{bindings.ObjectifView1Query.queryDescriptor}"
+                          queryListener="#{bindings.ObjectifView1Query.processQuery}" filterVisible="true"
+                          varStatus="vs" id="t1" columnStretching="multiple">
+                    <af:column sortProperty="#{bindings.ObjectifView1.hints.IdObjectif.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.ObjectifView1.hints.IdObjectif.label}" id="c1">
+                        <af:inputText value="#{row.bindings.IdObjectif.inputValue}"
+                                      label="#{bindings.ObjectifView1.hints.IdObjectif.label}"
+                                      required="#{bindings.ObjectifView1.hints.IdObjectif.mandatory}"
+                                      columns="#{bindings.ObjectifView1.hints.IdObjectif.displayWidth}"
+                                      maximumLength="#{bindings.ObjectifView1.hints.IdObjectif.precision}"
+                                      shortDesc="#{bindings.ObjectifView1.hints.IdObjectif.tooltip}" id="it1">
+                            <f:validator binding="#{row.bindings.IdObjectif.validator}"/>
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.ObjectifView1.hints.IdObjectif.format}"/>
+                        </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ObjectifView1.hints.Nom.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.ObjectifView1.hints.Nom.label}" id="c2">
+                        <af:inputText value="#{row.bindings.Nom.inputValue}"
+                                      label="#{bindings.ObjectifView1.hints.Nom.label}"
+                                      required="#{bindings.ObjectifView1.hints.Nom.mandatory}"
+                                      columns="#{bindings.ObjectifView1.hints.Nom.displayWidth}"
+                                      maximumLength="#{bindings.ObjectifView1.hints.Nom.precision}"
+                                      shortDesc="#{bindings.ObjectifView1.hints.Nom.tooltip}" id="it2">
+                            <f:validator binding="#{row.bindings.Nom.validator}"/>
+                        </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ObjectifView1.hints.Description.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.ObjectifView1.hints.Description.label}" id="c3">
+                        <af:inputText value="#{row.bindings.Description.inputValue}"
+                                      label="#{bindings.ObjectifView1.hints.Description.label}"
+                                      required="#{bindings.ObjectifView1.hints.Description.mandatory}"
+                                      columns="#{bindings.ObjectifView1.hints.Description.displayWidth}"
+                                      maximumLength="#{bindings.ObjectifView1.hints.Description.precision}"
+                                      shortDesc="#{bindings.ObjectifView1.hints.Description.tooltip}" id="it3">
+                            <f:validator binding="#{row.bindings.Description.validator}"/>
+                        </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ObjectifView1.hints.Delai.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.ObjectifView1.hints.Delai.label}" id="c4">
+                        <af:inputText value="#{row.bindings.Delai.inputValue}"
+                                      label="#{bindings.ObjectifView1.hints.Delai.label}"
+                                      required="#{bindings.ObjectifView1.hints.Delai.mandatory}"
+                                      columns="#{bindings.ObjectifView1.hints.Delai.displayWidth}"
+                                      maximumLength="#{bindings.ObjectifView1.hints.Delai.precision}"
+                                      shortDesc="#{bindings.ObjectifView1.hints.Delai.tooltip}" id="it4">
+                            <f:validator binding="#{row.bindings.Delai.validator}"/>
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.ObjectifView1.hints.Delai.format}"/>
+                        </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ObjectifView1.hints.Remarque.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.ObjectifView1.hints.Remarque.label}" id="c5">
+                        <af:inputText value="#{row.bindings.Remarque.inputValue}"
+                                      label="#{bindings.ObjectifView1.hints.Remarque.label}"
+                                      required="#{bindings.ObjectifView1.hints.Remarque.mandatory}"
+                                      columns="#{bindings.ObjectifView1.hints.Remarque.displayWidth}"
+                                      maximumLength="#{bindings.ObjectifView1.hints.Remarque.precision}"
+                                      shortDesc="#{bindings.ObjectifView1.hints.Remarque.tooltip}" id="it5">
+                            <f:validator binding="#{row.bindings.Remarque.validator}"/>
+                        </af:inputText>
+                    </af:column>
+                </af:table>
+                <f:facet name="statusbar"/>
+            </af:panelCollection>
+        </f:facet>
+        <f:facet name="second">
+            <af:panelTabbed position="above" id="pt1">
+                <af:showDetailItem id="tab1" text="Objectif details">
+                    <af:panelFormLayout id="pfl1">
+                        <af:inputText value="#{bindings.IdObjectif.inputValue}"
+                                      label="#{bindings.IdObjectif.hints.label}"
+                                      required="#{bindings.IdObjectif.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.IdObjectif.hints.displayWidth}"
+                                      maximumLength="#{bindings.IdObjectif.hints.precision}"
+                                      shortDesc="#{bindings.IdObjectif.hints.tooltip}" id="it6">
+                            <f:validator binding="#{bindings.IdObjectif.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.IdObjectif.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Nom.inputValue}" label="#{bindings.Nom.hints.label}"
+                                      required="#{bindings.Nom.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Nom.hints.displayWidth}"
+                                      maximumLength="#{bindings.Nom.hints.precision}"
+                                      shortDesc="#{bindings.Nom.hints.tooltip}" id="it7">
+                            <f:validator binding="#{bindings.Nom.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Description.inputValue}"
+                                      label="#{bindings.Description.hints.label}"
+                                      required="#{bindings.Description.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Description.hints.displayWidth}"
+                                      maximumLength="#{bindings.Description.hints.precision}"
+                                      shortDesc="#{bindings.Description.hints.tooltip}" id="it8">
+                            <f:validator binding="#{bindings.Description.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Delai.inputValue}" label="#{bindings.Delai.hints.label}"
+                                      required="#{bindings.Delai.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Delai.hints.displayWidth}"
+                                      maximumLength="#{bindings.Delai.hints.precision}"
+                                      shortDesc="#{bindings.Delai.hints.tooltip}" id="it9">
+                            <f:validator binding="#{bindings.Delai.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.Delai.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Remarque.inputValue}" label="#{bindings.Remarque.hints.label}"
+                                      required="#{bindings.Remarque.hints.mandatory}" readOnly="true"
+                                      columns="#{bindings.Remarque.hints.displayWidth}"
+                                      maximumLength="#{bindings.Remarque.hints.precision}"
+                                      shortDesc="#{bindings.Remarque.hints.tooltip}" id="it10">
+                            <f:validator binding="#{bindings.Remarque.validator}"/>
+                        </af:inputText>
+                    </af:panelFormLayout>
+                </af:showDetailItem>
+                <af:showDetailItem id="tab2" text="Rating"/>
+            </af:panelTabbed>
+        </f:facet>
+    </af:panelSplitter>
+</ui:composition>

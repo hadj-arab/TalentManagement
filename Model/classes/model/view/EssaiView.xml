@@ -3,7 +3,7 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="AssurerView"
+  Name="EssaiView"
   Version="12.1.3.10.8"
   InheritPersonalization="merge"
   SelectListFlags="1"
@@ -14,27 +14,20 @@
   SelectAllAttributes="false"
   PageIterMode="Full">
   <EntityUsage
-    Name="Assurer"
-    Entity="model.entity.Assurer"/>
+    Name="Essai"
+    Entity="model.entity.Essai"/>
   <ViewAttribute
-    Name="IdFormation"
+    Name="Id"
     IsNotNull="true"
     PrecisionRule="true"
-    EntityAttrName="IdFormation"
-    EntityUsage="Assurer"
-    AliasName="ID_FORMATION"/>
+    EntityAttrName="Id"
+    EntityUsage="Essai"
+    AliasName="ID"/>
   <ViewAttribute
-    Name="IdCompetence"
+    Name="Nom"
     IsNotNull="true"
     PrecisionRule="true"
-    EntityAttrName="IdCompetence"
-    EntityUsage="Assurer"
-    AliasName="ID_COMPETENCE"/>
-  <ViewAttribute
-    Name="NiveauVise"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="NiveauVise"
-    EntityUsage="Assurer"
-    AliasName="NIVEAU_VISE"/>
+    EntityAttrName="Nom"
+    EntityUsage="Essai"
+    AliasName="NOM"/>
 </ViewObject>

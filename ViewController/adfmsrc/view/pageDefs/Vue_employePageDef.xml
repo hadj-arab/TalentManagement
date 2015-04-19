@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="Vue_employePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="taskflowdefinition31" taskFlowId="/WEB-INF/competences-task-flow-definition.xml#task-flow-definition3"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="taskflowdefinition21" taskFlowId="/WEB-INF/formations-task-flow-definition.xml#task-flow-definition2"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings/>
+</pageDefinition>

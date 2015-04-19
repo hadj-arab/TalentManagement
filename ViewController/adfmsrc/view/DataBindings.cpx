@@ -8,16 +8,33 @@
   </definitionFactories>
   <pageMap>
     <page path="/mes_compétences.jsff" usageId="view_untitled2PageDef"/>
-    <page path="/mes_formations.jsff" usageId="view_mes_formationsPageDef"/>
     <page path="/Springboard.jsf" usageId="view_SpringboardPageDef"/>
+    <page path="/mes_formations.jsff" usageId="view_listePageDef"/>
+    <page path="/Vue_employe.jsf" usageId="view_Vue_employePageDef"/>
+    <page path="/mes_competences.jsff" usageId="view_mes_competencesPageDef"/>
+    <page path="/mes_objectifs.jsff" usageId="view_mes_objectifsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled2PageDef" path="view.pageDefs.untitled2PageDef"/>
     <page id="view_mes_formationsPageDef" path="view.pageDefs.mes_formationsPageDef"/>
     <page id="view_SpringboardPageDef" path="view.pageDefs.SpringboardPageDef"/>
+    <page id="view_listePageDef" path="view.pageDefs.listePageDef"/>
+    <page id="view_Vue_employePageDef" path="view.pageDefs.Vue_employePageDef"/>
+    <page id="view_mes_competencesPageDef" path="view.pageDefs.mes_competencesPageDef"/>
+    <page id="view_mes_objectifsPageDef" path="view.pageDefs.mes_objectifsPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl1" Package="model.view"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl2" Package="model.entity"
                      FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
                      SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
                      SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"

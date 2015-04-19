@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AffecterFk3Assoc"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Objectif"
+    Cardinality="1"
+    Source="true"
+    Owner="model.entity.Objectif">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Objectif"/>
+      <Attr Name="_foreignKey" Value="model.entity.Objectif.Table1Pk"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entity.Objectif.IdObjectif"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="Affecter"
+    Cardinality="-1"
+    Owner="model.entity.Affecter">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Affecter"/>
+      <Attr Name="_foreignKey" Value="model.entity.Affecter.AffecterFk3"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entity.Affecter.IdObjectif"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

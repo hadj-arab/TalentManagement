@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="AffecterView1"
+    ViewObjectName="model.view.AffecterView"/>
+  <ViewUsage
+    Name="Agent1View1"
+    ViewObjectName="model.view.Agent1View"/>
+  <ViewUsage
+    Name="Assurer1View1"
+    ViewObjectName="model.view.Assurer1View"/>
+  <ViewUsage
+    Name="BesoinsFormation1View1"
+    ViewObjectName="model.view.BesoinsFormation1View"/>
+  <ViewUsage
+    Name="Competence1View1"
+    ViewObjectName="model.view.Competence1View"/>
+  <ViewUsage
+    Name="EssaiView1"
+    ViewObjectName="model.view.EssaiView"/>
+  <ViewUsage
+    Name="Formation1View1"
+    ViewObjectName="model.view.Formation1View"/>
+  <ViewUsage
+    Name="Objectif1View1"
+    ViewObjectName="model.view.Objectif1View"/>
+  <ViewUsage
+    Name="Occuper1View1"
+    ViewObjectName="model.view.Occuper1View"/>
+  <ViewUsage
+    Name="Organiser1View1"
+    ViewObjectName="model.view.Organiser1View"/>
+  <ViewUsage
+    Name="OrganismeFormation1View1"
+    ViewObjectName="model.view.OrganismeFormation1View"/>
+  <ViewUsage
+    Name="Passer1View1"
+    ViewObjectName="model.view.Passer1View"/>
+  <ViewUsage
+    Name="Posseder1View1"
+    ViewObjectName="model.view.Posseder1View"/>
+  <ViewUsage
+    Name="Poste1View1"
+    ViewObjectName="model.view.Poste1View"/>
+  <ViewUsage
+    Name="Requerir1View1"
+    ViewObjectName="model.view.Requerir1View"/>
+  <ViewUsage
+    Name="Structure1View1"
+    ViewObjectName="model.view.Structure1View"/>
+  <ViewUsage
+    Name="Superviser1View1"
+    ViewObjectName="model.view.Superviser1View"/>
+</AppModule>
